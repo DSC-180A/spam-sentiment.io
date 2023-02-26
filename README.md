@@ -1,4 +1,4 @@
-# Website for AutoFiNews Project
+# How Spam Affects Sentiment of Tweet Website 
 
 ## Credits
 
