@@ -1,5 +1,4 @@
-# website-test.io
+# Website for AutoFiNews Project
 
----
-This is a test of a jerkyll website
----
+## Webpage
+* https://aponyua991.github.io/AutoFiNews/
