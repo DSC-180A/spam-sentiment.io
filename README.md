@@ -6,4 +6,4 @@
 * Credits for the template: templated.co
 
 ## Project Website
-* https://dsc-180a.github.io/website-test.io/
+* https://dsc-180a.github.io/spam-sentiment.io/
