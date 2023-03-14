@@ -12,6 +12,7 @@
 	#Pipeline {
 		position:relative;
 		left:20px;
+		top:-60px; 
 	}
 
 /* Reset */
