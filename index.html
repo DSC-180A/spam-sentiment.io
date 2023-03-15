@@ -96,7 +96,8 @@
 						<h2>Baseline Spam Detection: Naive Bayes Model</h2>
 						
 						<p>
-							Talk about why you chose this model and what the model is
+							For our baseline model, we used a Multinomial Naive Bayes classifier using unigrams. We chose to use a multinomial version of Naive Bayes because it looks at the occurrence count of a word rather than if a word appears or not like we would see in a Bernoulli Naive Bayes. We used Naive Bayes as our baseline model because it is more straightforward to understand as it follows Bayes theorem and is a probabilistic approach. It is also extremely fast for training and prediction as well as only has a few parameters to tune. Before we are able to train the model, we have to preprocess the tweets to only keep the base of the tweet and remove features that are related to the use of social media such as hashtags and image links. We don’t want features of a tweet that are unique and unlikely to be seen in other tweets because it follows Bayes theorem which looks at probabilities of an event based on the occurrence of another event To optimize the model, we use K-fold cross-validation with 5 folds to tune the smoothing parameter alpha. We find that alpha=.5 is the optimal alpha parameter for our model and use the model to predict on the test set. The results of predicting on the test set is show in the confusion matrix below.
+
 						</p>
 						
 						<img src="images/cm_nb_white.png" width="450" height="300">
@@ -105,7 +106,7 @@
 
 
 						<p>
-							Results of how the model performed.
+							As we can see in the confusion matrix, it is not the best performing model of all time, but it does a decent job of predicting whether it is spam or not. The model has an accuracy of 79.5% with minimal work in tuning the model. Since this is our baseline model, we are using the results of this to make sure our more advanced model is performing as expected.
 						</p>
 					</body>
 				</div>
