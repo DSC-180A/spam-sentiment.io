@@ -140,20 +140,18 @@
 					<header class="align-center">
 						<h2>Sentiment Classifier: NLTK VADER</h2>
 						<p>
-							VADER is a lexical based model that maps words to sentiment by building a dictionary of sentiments, also known as a lexicon. 
+							VADER is a lexical based model that maps words to sentiment by building a dictionary of sentiments, also known as a lexicon.<br>
 							For example, both “sux” and “sucks” have the same sentiment polarity score assigned by VADER.
-							
-							<br>
-							The sentiment scores of VADER also retain contextual information about the lexicons within the sentence. It uses punctuation marks, capitalizations, degree modifiers, usage of the word “but”, and tri-grams to gain contextual awareness.
-							We use the compound polarity score from VADER, to assign a sentiment score to each incoming tweet
-							The compound score is the numerical representation of the polarity between -1 and 1, we classify the corresponding sentiment through the following:
+							The sentiment scores of VADER also retain contextual information about the lexicons within the sentence. It uses punctuation marks, capitalizations, degree modifiers, usage of the word “but”, and tri-grams to gain contextual awareness.	<br>
+							We use the compound polarity score from VADER, to assign a sentiment score to each incoming tweet. 	<br>
+							The compound score is the numerical representation of the polarity between -1 and 1, we classify the corresponding sentiment through the following: 
 
 						</p>
 						
 						<p>
-							Positive: Compound Score <span>&#8805;</span> .05<br>
-							Neutral: -0.05 < Compound Score < 0.05<br>
-							Negative: Compound Score <span>&#8804;</span> -0.05
+							<b>Positive:</b> Compound Score <span>&#8805;</span> .05<br>
+							<b>Neutral: </b>-0.05 < Compound Score < 0.05<br>
+							<b>Negative: </b>Compound Score <span>&#8804;</span> -0.05
 						</p>
 
 					</header>
