@@ -40,7 +40,7 @@
 				<section id="banner" background="images/background-blue.jpg">
 					<div class="inner">
 						<header>
-							<h1>How Spam Affects Sentiment of Tweet</h1>
+							<h1>How Spam Affects Sentiment of Tweets</h1>
 							<p>By: Lucas Lee, Tyson Tran, Yi Li</p>
 						</header>
 						<!-- <a href="#main" class="button big alt scrolly">Dignissim</a> -->
@@ -140,7 +140,14 @@
 					<header class="align-center">
 						<h2>Sentiment Classifier: NLTK VADER</h2>
 						<p>
-							Text goes here
+							VADER is a lexical based model that maps words to sentiment by building a dictionary of sentiments, also known as a lexicon. 
+							For example, both “sux” and “sucks” have the same sentiment polarity score assigned by VADER.
+							
+							<br>
+							The sentiment scores of VADER also retain contextual information about the lexicons within the sentence. It uses punctuation marks, capitalizations, degree modifiers, usage of the word “but”, and tri-grams to gain contextual awareness.
+							We use the compound polarity score from VADER, to assign a sentiment score to each incoming tweet
+							The compound score is the numerical representation of the polarity between -1 and 1, we classify the corresponding sentiment through the following:
+
 						</p>
 						
 						<p>
