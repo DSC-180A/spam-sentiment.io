@@ -5,24 +5,28 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
-	<head>
-		<title>DSC 180B Project</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	</head>
-	<body>
 
-		<!-- Header -->
-			<header id="header">
-				<a href="https://github.com/DSC-180A/spam.detector.github.io" target="_blank">Github Repo</a>
-				<a href="https://docs.google.com/document/d/13nAwga89HJCWi3uX6Qh73iVK9QkvRbcFr2ZsZM6nBOY/edit?usp=sharing" target="_blank">Report</a>
-				<a href="https://drive.google.com/file/d/1L944qOxzAIpOFeJ34b5daA_ZUZW--Bjj/view?usp=sharing" target="_blank">Poster</a>
-			</header>
+<head>
+	<title>DSC 180B Project</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
 
-		<!-- 
+<body>
+
+	<!-- Header -->
+	<header id="header">
+		<a href="https://github.com/DSC-180A/spam.detector.github.io" target="_blank">Github Repo</a>
+		<a href="https://docs.google.com/document/d/13nAwga89HJCWi3uX6Qh73iVK9QkvRbcFr2ZsZM6nBOY/edit?usp=sharing"
+			target="_blank">Report</a>
+		<a href="https://drive.google.com/file/d/1L944qOxzAIpOFeJ34b5daA_ZUZW--Bjj/view?usp=sharing"
+			target="_blank">Poster</a>
+	</header>
+
+	<!-- 
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
@@ -31,183 +35,248 @@
 				</ul>
 			</nav> -->
 
-			<!-- Banner -->
-			<!--
+	<!-- Banner -->
+	<!--
 				To use a video as your background, set data-video to the name of your video without
 				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
 				formats to work correctly.
 			-->
-				<section id="banner" background="images/background-blue.jpg">
-					<div class="inner">
-						<header>
-							<h1>How Spam Affects Sentiment of Tweets</h1>
-							<p>By: Lucas Lee, Tyson Tran, Yi Li</p>
-						</header>
-						<!-- <a href="#main" class="button big alt scrolly">Dignissim</a> -->
-					</div>
+	<section id="banner" background="images/background-blue.jpg">
+		<div class="inner">
+			<header>
+				<h1>How Spam Affects Sentiment of Tweets</h1>
+				<p>By: Lucas Lee, Tyson Tran, Yi Li</p>
+			</header>
+			<!-- <a href="#main" class="button big alt scrolly">Dignissim</a> -->
+		</div>
 
-				</section>
+	</section>
 
-		<!-- Main -->
-			<div id="main">
+	<!-- Main -->
+	<div id="main">
 
-			<!-- One -->
-			<section class="wrapper style1" >
-				<div class="inner">
-					<header class="align-center">
-						<h2>Introduction</h2>
-						<p>
-							With the exponential growth of microblogging social media platforms such as Twitter and Facebook in the last two decades, the issue of spam has followed the same trajectory. Spam is unsolicited and unwanted messages used to deceive and negatively impact the experience of other users. Since spam in social media is prevalent in our society today, we believe that it is necessary to investigate how public sentiment will change after accounting for spam because people are using social media as a way to gain information and form their opinions. It is important to see if a larger effort should be made in the fight against spam because it is dangerous if spam is misinforming and skewing large amounts of opinions. We believe that this issue is extremely prevalent in the topic of abortions because it is a controversial topic and contains lots of spam with the recent growth in public attention that it has received with the politicization of it. 
-							To perform this experiment, we will be using two different models for spam detection: a simpler Naive Bayes classifier and a more advanced transfer learning model based on Google’s BERT which will be complemented by NLTK VADER for sentiment analysis.
-						</p>
-					</header>
-					
-				</div>
-			</section>
+		<!-- One -->
+		<section class="wrapper style1">
+			<div class="inner">
+				<header class="align-center">
+					<h2>Introduction</h2>
+					<p>
+						With the exponential growth of microblogging social media platforms such as Twitter and Facebook
+						in the last two decades, the issue of spam has followed the same trajectory. Spam is unsolicited
+						and unwanted messages used to deceive and negatively impact the experience of other users. Since
+						spam in social media is prevalent in our society today, we believe that it is necessary to
+						investigate how public sentiment will change after accounting for spam because people are using
+						social media as a way to gain information and form their opinions. It is important to see if a
+						larger effort should be made in the fight against spam because it is dangerous if spam is
+						misinforming and skewing large amounts of opinions. We believe that this issue is extremely
+						prevalent in the topic of abortions because it is a controversial topic and contains lots of
+						spam with the recent growth in public attention that it has received with the politicization of
+						it.
+						To perform this experiment, we will be using two different models for spam detection: a simpler
+						Naive Bayes classifier and a more advanced transfer learning model based on Google’s BERT which
+						will be complemented by NLTK VADER for sentiment analysis.
+					</p>
+				</header>
 
-			<!-- Two -->
-			<section class="wrapper style1">
-				<div class="inner">
-					<header class="align-center">
-						<h2>Streaming Pipeline</h2>
-						<p>
-							We created a durable messaging system using Pulsar and Astra streaming to obtain real time tweets on abortion from Twitter to simulate the same experience that a user would get if they were on Twitter looking up abortion. In general, social media users are looking for the latest about what is going on, that is why it is necessary to use a method like a streaming pipeline to get the same feed a user would get. The benefit of using a real time messaging system is that the insights that we gain are not outdated like we would have gotten if we went with a batch processing model. The framework for the pipeline has four main components: data retrieval, spam detection, sentiment analysis, and visualization. We use Pulsar’s publish-subscribe pattern to effectively process the raw results from the Twitter API. As we can see in the figure below, the streaming pipeline provides a seamless experience of retrieving and transforming the tweets to be stored in the database.
-						</p>
+			</div>
+		</section>
+
+		<!-- Two -->
+		<section class="wrapper style1">
+			<div class="inner">
+				<header class="align-center">
+					<h2>Streaming Pipeline</h2>
+					<p>
+						We created a durable messaging system using Pulsar and Astra streaming to obtain real time
+						tweets on abortion from Twitter to simulate the same experience that a user would get if they
+						were on Twitter looking up abortion. In general, social media users are looking for the latest
+						about what is going on, that is why it is necessary to use a method like a streaming pipeline to
+						get the same feed a user would get. The benefit of using a real time messaging system is that
+						the insights that we gain are not outdated like we would have gotten if we went with a batch
+						processing model. The framework for the pipeline has four main components: data retrieval, spam
+						detection, sentiment analysis, and visualization. We use Pulsar’s publish-subscribe pattern to
+						effectively process the raw results from the Twitter API. As we can see in the figure below, the
+						streaming pipeline provides a seamless experience of retrieving and transforming the tweets to
+						be stored in the database.
+					</p>
 					<!-- Division for Pipeline Image  -->
-				      </div>
-				      <div id="Pipeline">
-				         <img src="images/pipeline_white_transparent.png" width="650" height="600">
-				      </div>
-			
-					</header>
-					<!-- <body class="align-center">
+			</div>
+			<div id="Pipeline">
+				<img src="images/pipeline_white_transparent.png" width="650" height="600">
+			</div>
+
+			</header>
+			<!-- <body class="align-center">
 						<p>
 							Text goes here
 						</p>
 					</body> -->
-				</div>
-			</section>
+	</div>
+	</section>
 
 
-			<!-- Three -->
-			<section class="wrapper style1">
-				<div class="inner">
-					<header class="align-center">
-						<h2>Baseline Spam Detection: Naive Bayes Model</h2>
-						
-						<p>
-							For our baseline model, we used a Multinomial Naive Bayes classifier using unigrams. We chose to use a multinomial version of Naive Bayes because it looks at the occurrence count of a word rather than if a word appears or not like we would see in a Bernoulli Naive Bayes. We used Naive Bayes as our baseline model because it is more straightforward to understand as it follows Bayes theorem and is a probabilistic approach. It is also extremely fast for training and prediction as well as only has a few parameters to tune. Before we are able to train the model, we have to preprocess the tweets to only keep the base of the tweet and remove features that are related to the use of social media such as hashtags and image links. We don’t want features of a tweet that are unique and unlikely to be seen in other tweets because it follows Bayes theorem which looks at probabilities of an event based on the occurrence of another event To optimize the model, we use K-fold cross-validation with 5 folds to tune the smoothing parameter alpha. We find that alpha=.5 is the optimal alpha parameter for our model and use the model to predict on the test set. The results of predicting on the test set is show in the confusion matrix below.
+	<!-- Three -->
+	<section class="wrapper style1">
+		<div class="inner">
+			<header class="align-center">
+				<h2>Baseline Spam Detection: Naive Bayes Model</h2>
 
-						</p>
-						
-						<img src="images/cm_nb_white.png" width="450" height="300">
-					</header>
-					<body class="align-center">
+				<p>
+					For our baseline model, we used a Multinomial Naive Bayes classifier using unigrams. We chose to use
+					a multinomial version of Naive Bayes because it looks at the occurrence count of a word rather than
+					if a word appears or not like we would see in a Bernoulli Naive Bayes. We used Naive Bayes as our
+					baseline model because it is more straightforward to understand as it follows Bayes theorem and is a
+					probabilistic approach. It is also extremely fast for training and prediction as well as only has a
+					few parameters to tune. Before we are able to train the model, we have to preprocess the tweets to
+					only keep the base of the tweet and remove features that are related to the use of social media such
+					as hashtags and image links. We don’t want features of a tweet that are unique and unlikely to be
+					seen in other tweets because it follows Bayes theorem which looks at probabilities of an event based
+					on the occurrence of another event To optimize the model, we use K-fold cross-validation with 5
+					folds to tune the smoothing parameter alpha. We find that alpha=.5 is the optimal alpha parameter
+					for our model and use the model to predict on the test set. The results of predicting on the test
+					set is show in the confusion matrix below.
 
+				</p>
 
-						<p>
-							As we can see in the confusion matrix, it is not the best performing model of all time, but it does a decent job of predicting whether it is spam or not. The model has an accuracy of 79.5% with minimal work in tuning the model. Since this is our baseline model, we are using the results of this to make sure our more advanced model is performing as expected.
-						</p>
-					</body>
-				</div>
-			</section>
+				<img src="images/cm_nb_white.png" width="450" height="300">
+			</header>
 
-			<!-- Four -->
-			<section class="wrapper style1">
-				<div class="inner">
-					<header class="align-center">
-						<h2>Advanced Spam Detection: BERT Model</h2>
-						<p>
-							Text goes here
-						</p>
-						<img src="images/cm_bert.png" width="450" height="300">
-					</header>
-					<body class="align-center">
-						<p>
-							Text goes here
-						</p>
-					</body>
-				</div>
-			</section>
+			<body class="align-center">
 
 
-			<!-- Five -->
-			<section class="wrapper style1">
-				<div class="inner">
-					<header class="align-center">
-						<h2>Sentiment Classifier: NLTK VADER</h2>
-						<p>
-							We use NLTK VADER as our model because it was designed and trained with microblog-like data, just like Twitter. It combines both a lexicon and rule-based value to come up with a compound score. It uses a lexicon of 7,500 sentiment features that includes many features of microblog types of words and phrases such as slang and emoticons. It also uses grammatical elements such as punctuation, capitalization, and degree modifiers to gain contextual awareness. To calculate the compound score, it looks for the sentimental features and modifies the intensity and polarity based on the rules. It then sums the ratings of features and normalizes the sum to get a compound score between -1 and 1. Below, we have the threshold that we used to translate the compound score to the 3 classes of positive, neutral, and negative.
-							
-							<!-- VADER is a lexical based model that maps words to sentiment by building a dictionary of sentiments, also known as a lexicon.<br>
+				<p>
+					As we can see in the confusion matrix, it is not the best performing model of all time, but it does
+					a decent job of predicting whether it is spam or not. The model has an accuracy of 79.5% with
+					minimal work in tuning the model. Since this is our baseline model, we are using the results of this
+					to make sure our more advanced model is performing as expected.
+				</p>
+			</body>
+		</div>
+	</section>
+
+	<!-- Four -->
+	<section class="wrapper style1">
+		<div class="inner">
+			<header class="align-center">
+				<h2>Advanced Spam Detection: BERT Model</h2>
+				<p>
+					For our more advanced spam classification model, we’ve implemented a transfer learning model using
+					Google’s BERT. The model architecture is mainly comprised of using BERT’s embeddings and finetuning
+					it with two fully connected layers. The resulting spam classification/probability is then outputted
+					using a sigmoidal layer with one node. Within the linear layers, dropout, batch normalization, and
+					ReLU activations are utilized. Dropout is introduced to prevent over-dependence of certain neurons
+					and to improve robustness. Batch normalization is used to normalize the activations within the layer
+					to mitigate internal covariant shifts to improve the model’s stability. ReLU is employed to learn
+					non-linear patterns within the data.
+				</p>
+				<img src="images/cm_bert.png" width="450" height="300">
+			</header>
+
+			<body class="align-center">
+				<p>
+					The architecture results in 85.3% accuracy, a significant improvement over the naive bayes model
+					(79.5). The main improvement is actually the reduction of false negatives — tweets that were
+					predicted as non-spam that were actually spam. This suggests that the attention mechanism provides
+					meaningful contributions by semantically understanding individual t
+				</p>
+			</body>
+		</div>
+	</section>
+
+
+	<!-- Five -->
+	<section class="wrapper style1">
+		<div class="inner">
+			<header class="align-center">
+				<h2>Sentiment Classifier: NLTK VADER</h2>
+				<p>
+					We use NLTK VADER as our model because it was designed and trained with microblog-like data, just
+					like Twitter. It combines both a lexicon and rule-based value to come up with a compound score. It
+					uses a lexicon of 7,500 sentiment features that includes many features of microblog types of words
+					and phrases such as slang and emoticons. It also uses grammatical elements such as punctuation,
+					capitalization, and degree modifiers to gain contextual awareness. To calculate the compound score,
+					it looks for the sentimental features and modifies the intensity and polarity based on the rules. It
+					then sums the ratings of features and normalizes the sum to get a compound score between -1 and 1.
+					Below, we have the threshold that we used to translate the compound score to the 3 classes of
+					positive, neutral, and negative.
+
+					<!-- VADER is a lexical based model that maps words to sentiment by building a dictionary of sentiments, also known as a lexicon.<br>
 							For example, both “sux” and “sucks” have the same sentiment polarity score assigned by VADER.
 							The sentiment scores of VADER also retain contextual information about the lexicons within the sentence. It uses punctuation marks, capitalizations, degree modifiers, usage of the word “but”, and tri-grams to gain contextual awareness.	<br>
 							We use the compound polarity score from VADER, to assign a sentiment score to each incoming tweet. 	<br>
-							The compound score is the numerical representation of the polarity between -1 and 1, we classify the corresponding sentiment through the following: --> 
+							The compound score is the numerical representation of the polarity between -1 and 1, we classify the corresponding sentiment through the following: -->
 
-						</p>
-						
-						<p>
-							<b>Positive:</b> Compound Score <span>&#8805;</span> .05<br>
-							<b>Neutral: </b>-0.05 < Compound Score < 0.05<br>
-							<b>Negative: </b>Compound Score <span>&#8804;</span> -0.05
-						</p>
+				</p>
 
-						<p>
-							While NLTK VADER is good for our type of data, there is also a drawback that comes with it. Since the type of post on Twitter tend to be more informal, users tend to pay less attention to the quality of the text they are posting, so there tend to be more misspellings and grammatical errors. Since NLTK VADER is a lexicon and rule-based model, it may overlook important words and usage of text if there are misspellings and grammatical errors within the text which would cause the actual sentiment of the text to be misinterpreted.
-						</p>
+				<p>
+					<b>Positive:</b> Compound Score <span>&#8805;</span> .05<br>
+					<b>Neutral: </b>-0.05 < Compound Score < 0.05<br>
+						<b>Negative: </b>Compound Score <span>&#8804;</span> -0.05
+				</p>
 
-					</header>
-					<body class="align-center">
-						<p>
-						</p>
-					</body>
-				</div>
-			</section>
+				<p>
+					While NLTK VADER is good for our type of data, there is also a drawback that comes with it. Since
+					the type of post on Twitter tend to be more informal, users tend to pay less attention to the
+					quality of the text they are posting, so there tend to be more misspellings and grammatical errors.
+					Since NLTK VADER is a lexicon and rule-based model, it may overlook important words and usage of
+					text if there are misspellings and grammatical errors within the text which would cause the actual
+					sentiment of the text to be misinterpreted.
+				</p>
 
-			<!-- Six -->
-			<section class="wrapper style1">
-				<div class="inner">
-					<header class="align-center">
-						<h2>Results</h2>
-						<p>
-							Text goes here
-						</p>
-					</header>
-				</div>
-			</section>
+			</header>
 
-			<!-- Seven -->
-			<section class="wrapper style1">
-				<div class="inner">
-					<header class="align-center">
-						<h2>Discussion & Conclusion</h2>
-						<p>
-							Text goes here
-						</p>
-					</header>
-				</div>
-			</section>
-			
-			<section class="wrapper style1">
-				<div class="inner">
-					<header class="align-center">
-						<h2>
-						<a href="https://snapshots.raintank.io/dashboard/snapshot/6X0qYr7L8RAm0DScZRvdP8EDrfRpFNUq">Click to View Dashboards >> </a>
-						</h2>
-					</header>
-					
-				</div>
-			</section>
-			
-			</div>
+			<body class="align-center">
+				<p>
+				</p>
+			</body>
+		</div>
+	</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	<!-- Six -->
+	<section class="wrapper style1">
+		<div class="inner">
+			<header class="align-center">
+				<h2>Results</h2>
+				<p>
+					Text goes here
+				</p>
+			</header>
+		</div>
+	</section>
 
-	</body>
+	<!-- Seven -->
+	<section class="wrapper style1">
+		<div class="inner">
+			<header class="align-center">
+				<h2>Discussion & Conclusion</h2>
+				<p>
+					Text goes here
+				</p>
+			</header>
+		</div>
+	</section>
+
+	<section class="wrapper style1">
+		<div class="inner">
+			<header class="align-center">
+				<h2>
+					<a href="https://snapshots.raintank.io/dashboard/snapshot/6X0qYr7L8RAm0DScZRvdP8EDrfRpFNUq">Click to
+						View Dashboards >> </a>
+				</h2>
+			</header>
+
+		</div>
+	</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
