@@ -140,11 +140,13 @@
 					<header class="align-center">
 						<h2>Sentiment Classifier: NLTK VADER</h2>
 						<p>
-							VADER is a lexical based model that maps words to sentiment by building a dictionary of sentiments, also known as a lexicon.<br>
+							We use NLTK VADER as our model because it was designed and trained with microblog-like data, just like Twitter. It combines both a lexicon and rule-based value to come up with a compound score. It uses a lexicon of 7,500 sentiment features that includes many features of microblog types of words and phrases such as slang and emoticons. It also uses grammatical elements such as punctuation, capitalization, and degree modifiers to gain contextual awareness. To calculate the compound score, it looks for the sentimental features and modifies the intensity and polarity based on the rules. It then sums the ratings of features and normalizes the sum to get a compound score between -1 and 1. Below, we have the threshold that we used to translate the compound score to the 3 classes of positive, neutral, and negative.
+							
+							<!-- VADER is a lexical based model that maps words to sentiment by building a dictionary of sentiments, also known as a lexicon.<br>
 							For example, both “sux” and “sucks” have the same sentiment polarity score assigned by VADER.
 							The sentiment scores of VADER also retain contextual information about the lexicons within the sentence. It uses punctuation marks, capitalizations, degree modifiers, usage of the word “but”, and tri-grams to gain contextual awareness.	<br>
 							We use the compound polarity score from VADER, to assign a sentiment score to each incoming tweet. 	<br>
-							The compound score is the numerical representation of the polarity between -1 and 1, we classify the corresponding sentiment through the following: 
+							The compound score is the numerical representation of the polarity between -1 and 1, we classify the corresponding sentiment through the following: --> 
 
 						</p>
 						
@@ -152,6 +154,10 @@
 							<b>Positive:</b> Compound Score <span>&#8805;</span> .05<br>
 							<b>Neutral: </b>-0.05 < Compound Score < 0.05<br>
 							<b>Negative: </b>Compound Score <span>&#8804;</span> -0.05
+						</p>
+
+						<p>
+							While NLTK VADER is good for our type of data, there is also a drawback that comes with it. Since the type of post on Twitter tend to be more informal, users tend to pay less attention to the quality of the text they are posting, so there tend to be more misspellings and grammatical errors. Since NLTK VADER is a lexicon and rule-based model, it may overlook important words and usage of text if there are misspellings and grammatical errors within the text which would cause the actual sentiment of the text to be misinterpreted.
 						</p>
 
 					</header>
