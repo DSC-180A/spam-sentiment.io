@@ -239,7 +239,22 @@
 			<header class="align-center">
 				<h2>Results</h2>
 				<p>
-					Text goes here
+					After doing spam classification on the live-streamed tweets, we found that negative sentiment was
+					the most prevalent, constituting over 40% of all sentiments, followed by positive sentiment, while
+					neutral sentiment was the least common. It also suggests a similarity on the sentiment distribution,
+					regardless of whether spam is present or not. The maximum difference is 6%. Besides categorical
+					sentiment, we scrutinized the exact sentiment compound score distribution as well.
+				</p>
+				<p>
+					Besides categorical sentiment, we scrutinized the exact sentiment compound score (SCS) distribution
+					as well. The mean SCS for NB filtered tweets, BERT filtered tweets, and all tweets (non-filtered)
+					are approximately -0.065, -0.042, and -0.071, respectively. We saw that spam-filtered tweets
+					exhibits lower SCS than unfiltered tweets. This aligns with the SCS of manually filtered tweets,
+					which average around -0.033. Furthermore, the discrepancy in SCS between BERT filtered tweets and
+					all tweets (0.029) is notably larger than that between NB filtered tweets and all tweets (0.006).
+					This marginal difference for the NB spam classifier implies that a user employing an NB-based spam
+					filter on Twitter would likely perceive no noticeable change in sentiment within the discussions
+					compared to not using any filter.
 				</p>
 			</header>
 		</div>
@@ -251,7 +266,16 @@
 			<header class="align-center">
 				<h2>Discussion & Conclusion</h2>
 				<p>
-					Text goes here
+					Our analysis of streamed tweets on abortion-related topics reveals that a significant proportion of
+					tweets contain spam content, as determined by both Naive Bayes and transfer learning models. Despite
+					the prevalence of spam, we found that the sentiment distributions of all tweets and manually/model
+					filtered quality tweets were quite similar, with the majority expressing negative sentiment with a
+					maximum sentiment difference of 6%. Furthermore, examination of the sentiment compound score
+					suggested that the presence of spam did not have a significant impact on the overall sentiment
+					towards abortion-related topics. However, upon closer inspection, we observed a slightly more
+					negative sentiment associated with tweets containing spam, as indicated by the mean sentiment
+					compound score. This finding highlights the potential for spam to subtly influence public sentiment
+					and underscores the importance of identifying and filtering out such content in future analyses.
 				</p>
 			</header>
 		</div>
